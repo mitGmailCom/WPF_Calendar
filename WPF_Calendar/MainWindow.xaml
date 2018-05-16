@@ -5,8 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Calendar"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="250" Width="350" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TreeView Grid.Column="0" >
+            <TreeViewItem Name="Winter" Header="Зима">
+                <TreeViewItem Header="Декабрь" Selected="TreeViewItem_Selected"></TreeViewItem>
+                <TreeViewItem Header="Январь" Selected="TreeViewItem_Selected"></TreeViewItem>
+                <TreeViewItem Header="Февраль" Selected="TreeViewItem_Selected"></TreeViewItem>
+            </TreeViewItem>
+            <TreeViewItem Name="Spring" Header="Весна">
+                <TreeViewItem Header="Март" Selected="TreeViewItem_Selected"></TreeViewItem>
+                <TreeViewItem Header="Апрель" Selected="TreeViewItem_Selected"></TreeViewItem>
+                <TreeViewItem Header="Май" Selected="TreeViewItem_Selected"></TreeViewItem>
+            </TreeViewItem>
+            <TreeViewItem Header="Лето">
+                <TreeViewItem Header="Июнь" Selected="TreeViewItem_Selected"></TreeViewItem>
+                <TreeViewItem Header="Июль" Selected="TreeViewItem_Selected"></TreeViewItem>
+                <TreeViewItem Header="Август" Selected="TreeViewItem_Selected"></TreeViewItem>
+            </TreeViewItem>
+            <TreeViewItem Header="Осень">
+                <TreeViewItem Header="Сентябрь" Selected="TreeViewItem_Selected"></TreeViewItem>
+                <TreeViewItem Header="Октябрь" Selected="TreeViewItem_Selected"></TreeViewItem>
+                <TreeViewItem Header="Ноябрь" Selected="TreeViewItem_Selected"></TreeViewItem>
+            </TreeViewItem>
+        </TreeView>
+        <ListView Name="lstView" Grid.Column="1"></ListView>
     </Grid>
 </Window>

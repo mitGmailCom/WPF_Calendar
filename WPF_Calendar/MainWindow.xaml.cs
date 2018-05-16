@@ -20,9 +20,37 @@ namespace WPF_Calendar
     /// </summary>
     public partial class MainWindow : Window
     {
+        Calendar calendar;
+        enum Mounth { декабрь = 12, январь = 1, февраль, март, апрель, май, июнь, июль, август, сентябрь, октябрь, ноябрь };
         public MainWindow()
         {
             InitializeComponent();
+            Loaded += MainWindow_Loaded;
+        }
+
+        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            calendar = new Calendar();
+        }
+
+        private void TreeViewItem_Selected(object sender, RoutedEventArgs e)
+        {
+            lstView.Items.Clear();
+            TreeViewItem tmpTrItem = new TreeViewItem();
+            if (tmpTrItem != null)
+                tmpTrItem = null;
+            tmpTrItem = sender as TreeViewItem;
+            foreach (Mounth item in Enum.GetValues(typeof(Mounth)))
+            {
+                if (item.ToString() == (tmpTrItem.Header.ToString()).ToLower())
+                {
+                    DateTime tDt = new DateTime(DateTime.Now.Year, (int)item, 1);
+                    calendar.DisplayDate = tDt;
+                    ListViewItem listVItem = new ListViewItem();
+                    listVItem.Content = calendar;
+                    lstView.Items.Add(listVItem);
+                }
+            }
         }
     }
 }
