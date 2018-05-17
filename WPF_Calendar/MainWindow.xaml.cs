@@ -21,21 +21,26 @@ namespace WPF_Calendar
     public partial class MainWindow : Window
     {
         Calendar calendar;
+        ToolTip tlt;
         enum Mounth { декабрь = 12, январь = 1, февраль, март, апрель, май, июнь, июль, август, сентябрь, октябрь, ноябрь };
         public MainWindow()
         {
             InitializeComponent();
             Loaded += MainWindow_Loaded;
+            
         }
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
             calendar = new Calendar();
+            tlt = new System.Windows.Controls.ToolTip();
+           
         }
 
         private void TreeViewItem_Selected(object sender, RoutedEventArgs e)
         {
             lstView.Items.Clear();
+
             TreeViewItem tmpTrItem = new TreeViewItem();
             if (tmpTrItem != null)
                 tmpTrItem = null;

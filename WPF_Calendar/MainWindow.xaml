@@ -5,32 +5,115 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Calendar"
         mc:Ignorable="d"
-        Title="MainWindow" Height="250" Width="350" WindowStartupLocation="CenterScreen">
+        Title="MainWindow" Name="wind" Height="250" Width="350" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"></ColumnDefinition>
             <ColumnDefinition Width="Auto"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <TreeView Grid.Column="0" >
-            <TreeViewItem Name="Winter" Header="Зима">
-                <TreeViewItem Header="Декабрь" Selected="TreeViewItem_Selected"></TreeViewItem>
-                <TreeViewItem Header="Январь" Selected="TreeViewItem_Selected"></TreeViewItem>
-                <TreeViewItem Header="Февраль" Selected="TreeViewItem_Selected"></TreeViewItem>
+            <TreeViewItem Header="Зима" ToolTipService.Placement="Left" ToolTipService.ShowDuration="1000">
+                <TreeViewItem.ToolTip>
+                    <ToolTip>
+                        <ToolTip.RenderTransform>
+                            <ScaleTransform ScaleX="0.7" ScaleY="0.7"></ScaleTransform>
+                        </ToolTip.RenderTransform>
+                        <Image Source="D:\Git_hub\WPF_Calendar\wint1.jpg"></Image>
+                    </ToolTip>
+                </TreeViewItem.ToolTip>
+                <TreeViewItem Header="Декабрь" Selected="TreeViewItem_Selected" ToolTipService.ShowDuration="1">
+                    <TreeViewItem.ToolTip>
+                        <ToolTip></ToolTip>
+                    </TreeViewItem.ToolTip>
+                </TreeViewItem>
+                <TreeViewItem Header="Январь" Selected="TreeViewItem_Selected" ToolTipService.ShowDuration="1">
+                    <TreeViewItem.ToolTip>
+                        <ToolTip></ToolTip>
+                    </TreeViewItem.ToolTip>
+                </TreeViewItem>
+                <TreeViewItem Header="Февраль" Selected="TreeViewItem_Selected" ToolTipService.ShowDuration="1">
+                    <TreeViewItem.ToolTip>
+                        <ToolTip></ToolTip>
+                    </TreeViewItem.ToolTip>
+                </TreeViewItem>
             </TreeViewItem>
-            <TreeViewItem Name="Spring" Header="Весна">
-                <TreeViewItem Header="Март" Selected="TreeViewItem_Selected"></TreeViewItem>
-                <TreeViewItem Header="Апрель" Selected="TreeViewItem_Selected"></TreeViewItem>
-                <TreeViewItem Header="Май" Selected="TreeViewItem_Selected"></TreeViewItem>
+            
+            <TreeViewItem Header="Весна" ToolTipService.Placement="Left" ToolTipService.ShowDuration="1000">
+                <TreeViewItem.ToolTip>
+                    <ToolTip>
+                        <ToolTip.RenderTransform>
+                            <ScaleTransform ScaleX="0.7" ScaleY="0.7"></ScaleTransform>
+                        </ToolTip.RenderTransform>
+                        <Image Source="D:\Git_hub\WPF_Calendar\Spr1.jpg"></Image>
+                    </ToolTip>
+                </TreeViewItem.ToolTip>
+                <TreeViewItem Header="Март" Selected="TreeViewItem_Selected" ToolTipService.ShowDuration="1">
+                    <TreeViewItem.ToolTip>
+                        <ToolTip></ToolTip>
+                    </TreeViewItem.ToolTip>
+                </TreeViewItem>
+                <TreeViewItem Header="Апрель" Selected="TreeViewItem_Selected" ToolTipService.ShowDuration="1">
+                    <TreeViewItem.ToolTip>
+                        <ToolTip></ToolTip>
+                    </TreeViewItem.ToolTip>
+                </TreeViewItem>
+                <TreeViewItem Header="Май" Selected="TreeViewItem_Selected" ToolTipService.ShowDuration="1">
+                    <TreeViewItem.ToolTip>
+                        <ToolTip></ToolTip>
+                    </TreeViewItem.ToolTip>
+                </TreeViewItem>
             </TreeViewItem>
-            <TreeViewItem Header="Лето">
-                <TreeViewItem Header="Июнь" Selected="TreeViewItem_Selected"></TreeViewItem>
-                <TreeViewItem Header="Июль" Selected="TreeViewItem_Selected"></TreeViewItem>
-                <TreeViewItem Header="Август" Selected="TreeViewItem_Selected"></TreeViewItem>
+
+            <TreeViewItem Header="Лето" ToolTipService.Placement="Left" ToolTipService.ShowDuration="1000">
+                <TreeViewItem.ToolTip>
+                    <ToolTip>
+                        <ToolTip.RenderTransform>
+                            <ScaleTransform ScaleX="0.7" ScaleY="0.7"></ScaleTransform>
+                        </ToolTip.RenderTransform>
+                        <Image Source="D:\Git_hub\WPF_Calendar\Summ1.jpg"></Image>
+                    </ToolTip>
+                </TreeViewItem.ToolTip>
+                <TreeViewItem Header="Июнь" Selected="TreeViewItem_Selected" ToolTipService.ShowDuration="1">
+                    <TreeViewItem.ToolTip>
+                        <ToolTip></ToolTip>
+                    </TreeViewItem.ToolTip>
+                </TreeViewItem>
+                <TreeViewItem Header="Июль" Selected="TreeViewItem_Selected" ToolTipService.ShowDuration="1">
+                    <TreeViewItem.ToolTip>
+                        <ToolTip></ToolTip>
+                    </TreeViewItem.ToolTip>
+                </TreeViewItem>
+                <TreeViewItem Header="Август" Selected="TreeViewItem_Selected" ToolTipService.ShowDuration="1">
+                    <TreeViewItem.ToolTip>
+                        <ToolTip></ToolTip>
+                    </TreeViewItem.ToolTip>
+                </TreeViewItem>
             </TreeViewItem>
-            <TreeViewItem Header="Осень">
-                <TreeViewItem Header="Сентябрь" Selected="TreeViewItem_Selected"></TreeViewItem>
-                <TreeViewItem Header="Октябрь" Selected="TreeViewItem_Selected"></TreeViewItem>
-                <TreeViewItem Header="Ноябрь" Selected="TreeViewItem_Selected"></TreeViewItem>
+            
+            <TreeViewItem Header="Осень" ToolTipService.Placement="Left" ToolTipService.ShowDuration="1000">
+                <TreeViewItem.ToolTip>
+                    <ToolTip>
+                        <ToolTip.RenderTransform>
+                            <ScaleTransform ScaleX="0.7" ScaleY="0.7"></ScaleTransform>
+                        </ToolTip.RenderTransform>
+                        <Image Source="D:\Git_hub\WPF_Calendar\Aut1.jpg"></Image>
+                    </ToolTip>
+                </TreeViewItem.ToolTip>
+                <TreeViewItem Header="Сентябрь" Selected="TreeViewItem_Selected" ToolTipService.ShowDuration="1">
+                    <TreeViewItem.ToolTip>
+                        <ToolTip></ToolTip>
+                    </TreeViewItem.ToolTip>
+                </TreeViewItem>
+                <TreeViewItem Header="Октябрь" Selected="TreeViewItem_Selected" ToolTipService.ShowDuration="1">
+                    <TreeViewItem.ToolTip>
+                        <ToolTip></ToolTip>
+                    </TreeViewItem.ToolTip>
+                </TreeViewItem>
+                <TreeViewItem Header="Ноябрь" Selected="TreeViewItem_Selected" ToolTipService.ShowDuration="1">
+                    <TreeViewItem.ToolTip>
+                        <ToolTip></ToolTip>
+                    </TreeViewItem.ToolTip>
+                </TreeViewItem>
             </TreeViewItem>
         </TreeView>
         <ListView Name="lstView" Grid.Column="1"></ListView>
